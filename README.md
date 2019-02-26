@@ -5,6 +5,6 @@ We are from a small town called Novi Bečej in Serbia.
 *This is our group's official site and that is being constantly developed.*
 
 # Notes
-* Site is in Serbian language and maybe in the future their will be more options.
+* Site is in Serbian, and in the future, there may be more options.
 * If you find bugs/problems, you can freely open an issue for it.
 * Also if you have an idea, just open an issue for it and we will consider it adding to the site.
