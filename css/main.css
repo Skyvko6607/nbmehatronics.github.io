@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Simple Print'; /*a name to be used later*/
+    src: url('../font/Simple Print.ttf'); /*URL to font*/
+}
+
+body {
+    font-family: 'Simple Print', serif !important;
+    background: #1f2228;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.coverGradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(126deg, rgba(0, 0, 0, 1) 0%, rgba(18, 26, 42, 0.9752275910364145) 21%, rgba(28, 8, 48, 0.865983893557423) 34%, rgba(48, 8, 45, 0.6306897759103641) 52%, rgba(28, 8, 48, 0) 100%);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+
+.coverImg {
+    z-index: -2;
+}
+
+.coverDiv {
+    position: absolute;
+}
+
+.coverTitle {
+    font-size: 7vw;
+    color: #d0c9e5;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    line-height: 5vw;
+}
+
+.nav-link {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 4vh;
+    line-height: 3vh;
+}
+
+.subTitle {
+    font-size: 4.5vh;
+    color: #c9e5de;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    word-break: break-word;
+    width: 80vh;
+    margin: 40vh auto auto auto;
+}
+
+.logo {
+    position: absolute;
+    transform: translate(0, -15vh);
+    width: 100%;
+    height: 90%;
+    margin: auto auto auto auto;
+}
+
+.titleButton {
+    width: 8vw;
+    height: 3vw;
+    font-size: 2.25vw !important;
+    line-height: 2.25vw !important;
+    font-weight: bold !important;
+}
+
+.downArrow {
+    font-size: 2vw;
+    line-height: 1.75vw;
+    color: white;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+.divider {
+    border-top: 0.15vw solid #F5EDF0;
+}
+
+#nav {
+    font-size: 2vw;
+    line-height: 1vw;
+}
+
+#navBrandTitle {
+    font-size: 2vw;
+}
+
+.aboutCover {
+    background: #2C4251;
+/ / 2 C4251 width: 100 %;
+    height: 100%;
+}
+
+.person {
+    height: 30vw;
+    width: 17.5vw;
+    margin-left: 1.25vw !important;
+    margin-right: 1.25vw !important;
+    border: 0.05vw solid white;
+    border-radius: 2vw;
+    background-color: rgba(49, 73, 60, 0.25);
+    transition: .5s;
+}
+
+.person:hover {
+    transform: scale(1.25);
+}
+
+.personIcon {
+    margin: 2vw auto auto;
+    border: 0.1vw solid white;
+    width: 60%;
+    height: 40%;
+    border-radius: 10vw;
+    object-fit: cover;
+}
+
+.person h1 {
+    color: white;
+    font-size: 3vw;
+    margin: 0;
+}
+
+.person h3 {
+    color: #CDEDFD;
+    font-size: 2vw;
+    word-wrap: break-word;
+    margin: 0 0.75vw 0 0.75vw;
+    line-height: 2vw;
+}
+
+.personCover {
+    position: absolute;
+    z-index: 3;
+    opacity: 0.15;
+}
+
+.aboutTitle {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 7vw;
+    z-index: 4;
+    color: white;
+    font-size: 6vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.a-over {
+    position: relative;
+    z-index: 4;
+}
+
+.productsTitle {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 8vw;
+    z-index: 4;
+    color: white;
+    font-size: 8vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.productCover {
+    background: #23142b;
+    width: 100%;
+    height: 100%;
+}
+
+.productsCover {
+    position: absolute;
+    z-index: 3;
+    opacity: 0.4;
+}
+
+.product {
+    height: auto;
+    width: 22.5vw;
+    margin-left: 1.25vw !important;
+    margin-right: 1.25vw !important;
+    border-radius: 3vw;
+    transition: .25s;
+    border: 0.5vw solid #994500;
+    background: url("../img/stripes.jpg") 45% 10% no-repeat;
+}
+
+.product:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.productImg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 1.25vw;
+}
+
+.product h1 {
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    margin: auto;
+}
