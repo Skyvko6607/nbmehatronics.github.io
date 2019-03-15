@@ -185,14 +185,16 @@ body {
 }
 
 .product {
-    height: auto;
+    height: 50vh;
     width: 22.5vw;
     margin-left: 1.25vw !important;
     margin-right: 1.25vw !important;
     border-radius: 3vw;
     transition: .25s;
     border: 0.5vw solid #994500;
-    background: url("../img/stripes.jpg") 45% 10% no-repeat;
+	position: relative;
+    background: url("../img/stripesAnim.gif") 50% 50% no-repeat;
+	background-size: cover;
 }
 
 .product:hover {
@@ -200,16 +202,37 @@ body {
 }
 
 .productImg {
+	position: absolute;
     width: 100%;
     height: auto;
     object-fit: contain;
-    margin: 1.25vw;
+	transform: translate(-50%, 0);
+}
+
+.productInfo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(71, 71, 71, 0.75);
+	margin: 0;
+	opacity: 0;
+	transition: .5s;
+}
+
+.productInfo:hover {
+	opacity: 1;
 }
 
 .product h1 {
     color: white;
-    font-size: 5vw;
+    font-size: 7vh;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
     margin: auto;
+}
+
+.product p {
+	color: white;
+	font-size: 4.5vh;
+	font-weight: bold;
 }
