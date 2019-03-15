@@ -7,6 +7,7 @@ body {
     font-family: 'Simple Print', serif !important;
     background: #1f2228;
     scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -184,6 +185,11 @@ body {
     opacity: 0.4;
 }
 
+.products {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
 .product {
     height: 50vh;
     width: 22.5vw;
@@ -217,6 +223,7 @@ body {
 	margin: 0;
 	opacity: 0;
 	transition: .5s;
+    border-radius: 3vw;
 }
 
 .productInfo:hover {
