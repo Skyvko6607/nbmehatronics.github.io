@@ -1,7 +1,7 @@
 body,html {
   overflow-x: hidden;
   margin: 0;
-  font-family: Georgia;
+  font-family: 'Georgia';
 }
 
 .navbar {
@@ -127,7 +127,7 @@ body,html {
   height: 100%;
   position: absolute;
   top: 100%;
-    color: white;
+  color: white;
 }
 
 #aboutSection #title {
@@ -160,7 +160,7 @@ body,html {
   display: block;
 }
 
-.people #divider {
+#divider {
   width: 1%;
   height: 45%;
   opacity: 0.05;
@@ -192,4 +192,134 @@ body,html {
 #person #role {
   line-height: 1.5vw;
   font-size: 1vw;
+}
+
+#productsSection {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 200%;
+  color: black;
+}
+
+#productsSection #title {
+  font-size: 1.5vw;
+  text-align: center;
+  position: absolute;
+  top: 7.5%;
+  height: auto;
+  width: 100%;
+}
+
+#productsSection #description {
+  position: absolute;
+  transform: translate(75%, 0);
+  width: 40%;
+  font-size: 1vw;
+  margin: auto;
+  text-align: center;
+  top: 20%;
+  line-height: 2vw;
+}
+
+.products {
+  width: 100%;
+  position: relative;
+  height: 65%;
+  top: 35%;
+  text-align: center;
+  display: block;
+}
+
+#product {
+  width: 20%;
+  margin-top: 0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#product img {
+  width: 12.5vw;
+  height: 12.5vw;
+  border-radius: 2vw;
+  object-fit: cover;
+  margin: 0;
+}
+
+#product #name {
+  font-size: 1.5vw;
+  font-weight: bold;
+  width: 100%;
+  margin: auto;
+  margin-top: 2vw;
+}
+
+#product #description {
+  line-height: 1.5vw;
+  font-size: 1vw;
+  position: relative;
+  left: -75%;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+  width: 100%;
+}
+
+.products #divider {
+  opacity: 0.5;
+}
+
+footer {
+  position: absolute;
+  bottom: -250%;
+  height: 20vw;
+  width: 100%;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+footer #contact {
+  margin: 2vw;
+}
+
+footer #contact ul {
+  margin: auto;
+  vertical-align: middle;
+}
+
+footer #contact ul li {
+  font-size: 1vw;
+  margin-top: 2.5vw;
+}
+
+footer #contact #description {
+  font-size: 1vw;
+  margin-top: 2.5vw;
+  position: absolute;
+  z-index: 20;
+  width: 30vw;
+  transform: translate(200%, -140%);
+  line-height: 2vw;
+  text-align: right;
+  color: rgba(255,255,255,1);
+}
+
+footer #copyrightInfo {
+  position: absolute;
+  bottom: 0;
+  height: 15%;
+  background-color: #161616;
+  width: 100%;
+  text-align: right;
+  margin: auto;
+}
+
+footer #copyrightInfo #copy {
+  width: 95%;
+  font-size: 0.9vw;
+  vertical-align: middle;
 }
