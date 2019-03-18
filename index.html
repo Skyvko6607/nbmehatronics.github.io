@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </head>
 <body>
   <section id="header">
@@ -106,6 +107,10 @@
         <p id="description">
             Služi za učenje i programiranje<br>na jedan zabavniji način.<br>Takođe može služiti i kao igračka koja se kontroliše daljinskim putem.
         </p>
+        <p id="price">
+          Cena: 10.000,00 Dinara
+        </p>
+        <button class="order orderSpider">Naruči</button>
       </div>
       <img id="divider" src="img/marks/VerticalLineBlack.png">
       <div id="product">
@@ -114,6 +119,10 @@
         <p id="description">
             Služi za bežično merenje temperature i vlage vazduha. Zbog svojih malih dimenzija, pristupačan je i najnepristupačnijim mestima.
         </p>
+        <p id="price">
+          Cena: 4.000,00 Dinara
+        </p>
+        <button class="order orderSensor">Naruči</button>
       </div>
       <img id="divider" src="img/marks/VerticalLineBlack.png">
       <div id="product">
@@ -122,6 +131,10 @@
         <p id="description">
             Može se koristiti kao ruka, ali sa malim modifikacijama može se koristiti kao sekač i crtač velike preciznosti i može se koristiti kao CNC mašina.
         </p>
+        <p id="price">
+          Cena: 15.000,00 Dinara
+        </p>
+        <button class="order orderHand">Naruči</button>
       </div>
     </div>
   </section>
@@ -153,19 +166,48 @@
     </div>
   </footer>
 
+  <section id="buyMenu" class="buyMenuClosed">
+    <div id="menu">
+      <a class="exitMenu"></a>
+      <div id="insideBorder">
+        <h1 id="buyProductName">NAME</h1>
+        <p id="buyProductDescription">DESCRIPTION</p>
+        <img id="buyProductImg" src="">
+        <p id="buyProductPrice">PRICE</p>
+
+        <form class="contactSend" action="mailto:skyvko506@gmail.com">
+          <input class="sendMsg" type="submit" value="Pošalji Poruku"></input>
+        </form>
+      </div>
+    </div>
+  </section>
+
 <script>
 
   $(document).ready(function() {
-      var stickyHeaderTop = $('.navbar').offset().top;
 
-      $(window).scroll(function(){
-          if( $(window).scrollTop() > stickyHeaderTop + 50) {
-            $('.navbar').addClass('navbarSelect');
-          } else {
-            $('.navbar').removeClass('navbarSelect');
-          }
+    $('.orderSpider, .orderHand, .orderSensor').click(function() {
+      $('#buyMenu').removeClass('buyMenuClosed');
+      $('#buyProductName').text($(this).parent().children('#name').text());
+      $('#buyProductDescription').text($(this).parent().children('#description').text());
+      $('#buyProductImg').attr('src', $(this).parent().children('img').attr('src'));
+      $('#buyProductPrice').text($(this).parent().children('#price').text());
+    });
+
+    $('.exitMenu').click(function() {
+      $('#buyMenu').addClass('buyMenuClosed');
+    });
+
+    var stickyHeaderTop = $('.navbar').offset().top;
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > stickyHeaderTop + 50) {
+          $('.navbar').addClass('navbarSelect');
+        } else {
+          $('.navbar').removeClass('navbarSelect');
+        }
       });
-  });
+    });
 
 </script>
 </body>

@@ -105,7 +105,7 @@ body,html {
   width: auto;
   height: auto;
   position: fixed;
-  z-index: 5;
+  z-index: 15;
   left: 0;
   bottom: 0;
 }
@@ -278,6 +278,15 @@ body,html {
   width: 100%;
 }
 
+#product #price {
+  line-height: 1.5vw;
+  font-size: 1vw;
+  position: relative;
+  left: 0%;
+  width: 100%;
+  bottom: 3vw;
+}
+
 .products #divider {
   opacity: 0.5;
 }
@@ -309,7 +318,7 @@ footer #contact #description {
   font-size: 1vw;
   margin-top: 2.5vw;
   position: absolute;
-  z-index: 20;
+  z-index: 14;
   width: 30vw;
   transform: translate(200%, -140%);
   line-height: 2vw;
@@ -331,4 +340,110 @@ footer #copyrightInfo #copy {
   width: 95%;
   font-size: 0.9vw;
   vertical-align: middle;
+}
+
+#buyMenu {
+  position: fixed;
+  z-index: 14;
+  width: 100%;
+  height: 350%;
+  background-color: rgba(0,0,0,0.35);
+  transition: .2s;
+  opacity: 1;
+}
+
+.buyMenuClosed {
+  z-index: -300 !important;
+  opacity: 0 !important;
+}
+
+#buyMenu #menu {
+  position: relative;
+  z-index: 15;
+  margin: auto;
+  width: 30vw;
+  height: 45vw;
+  background-color: #edf2ee;
+  border-radius: 2vw;
+  top: 1.5%;
+}
+
+#insideBorder {
+  border: 0.25vw solid rgba(0,0,0,0.25);
+  border-radius: 2vw;
+  width: 90%;
+  height: 92.5%;
+  margin: auto;
+  position: relative;
+  top: 3%;
+}
+
+.exitMenu {
+  position: absolute;
+  right: 0.5vw;
+  top: 0.5vw;
+  z-index: 30;
+  background: url('../img/marks/X.png') no-repeat;
+  background-size: cover;
+  width: 1.5vw;
+  height: 1.5vw;
+  cursor: pointer;
+}
+
+#insideBorder #buyProductName {
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 1vw;
+  margin: 1vw 1vw 0 1vw;
+}
+
+#insideBorder #buyProductDescription {
+  margin: 3vw 1vw 0 1vw;
+  font-size: 1.1vw;
+}
+
+#insideBorder #buyProductImg {
+  width: 65%;
+  height: auto;
+  text-align: center;
+  margin-left: 4vw;
+}
+
+#insideBorder #buyProductPrice {
+  margin: 3vw 1vw 0 1vw;
+  font-size: 1.5vw;
+  position: absolute;
+  bottom: 10vw;
+  left: 15%;
+}
+
+.sendMsg {
+  margin: 3vw 1vw 0 1vw;
+  border: 0.15vw solid #013851;
+  background-color: #0675a8;
+  border-radius: 0.25vw;
+  width: 7vw;
+  height: 3vw;
+  color: white;
+  font-size: 0.8vw;
+  position: absolute;
+  font-weight: bold;
+  left: 33.5%;
+  bottom: 5vw;
+}
+
+.order {
+  margin: 0vw 1vw 0 1vw;
+  border: 0.15vw solid #013851;
+  background-color: #0675a8;
+  border-radius: 0.25vw;
+  width: 7vw;
+  height: 3vw;
+  color: white;
+  font-size: 0.8vw;
+  position: absolute;
+  font-weight: bold;
+  transform: translate(-65%, 0);
+  bottom: -3vw;
+  cursor: pointer;
 }
