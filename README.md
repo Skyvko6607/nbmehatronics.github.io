@@ -1,8 +1,8 @@
 # NB Mehatronics - Official Site
-We are a small group of students that want to create, inovate new stuff.
+We are a small student company that want to create, inovate new stuff.
 We are from a small town called Novi Bečej in Serbia.
 
-*This is our group's official site and that is being constantly developed.*
+*This is our company's official site and that is being constantly developed.*
 
 # Notes
 * Site is in Serbian, and in the future, there may be more options.
