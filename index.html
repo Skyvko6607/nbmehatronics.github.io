@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+  <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.4.2.js"></script>
 </head>
 <body>
   <section id="header">
@@ -108,9 +109,9 @@
             Služi za učenje i programiranje<br>na jedan zabavniji način.<br>Takođe može služiti i kao igračka koja se kontroliše daljinskim putem.
         </p>
         <p id="price">
-          Cena: 10.000,00 Dinara
+          Cena: 15.000,00 Dinara
         </p>
-        <button class="order orderSpider">Naruči</button>
+        <button class="order orderSpider" value="6746def9ba3240038f94dc520a755c2f">Naruči</button>
       </div>
       <img id="divider" src="img/marks/VerticalLineBlack.png">
       <div id="product">
@@ -122,7 +123,7 @@
         <p id="price">
           Cena: 4.000,00 Dinara
         </p>
-        <button class="order orderSensor">Naruči</button>
+        <button class="order orderSensor" value="fd9835806d35408c94cd8ef402f8f059">Naruči</button>
       </div>
       <img id="divider" src="img/marks/VerticalLineBlack.png">
       <div id="product">
@@ -132,9 +133,25 @@
             Može se koristiti kao ruka, ali sa malim modifikacijama može se koristiti kao sekač i crtač velike preciznosti i može se koristiti kao CNC mašina.
         </p>
         <p id="price">
-          Cena: 15.000,00 Dinara
+          Cena: 10.000,00 Dinara
         </p>
         <button class="order orderHand">Naruči</button>
+      </div>
+      <img id="divider" src="img/marks/VerticalLineBlack.png">
+      <div id="product">
+        <img src="img/products/Skener.png">
+        <p id="name">Skener</p>
+        <p id="description">
+            ─────────────<br>
+            ─────────────<br>
+            ─────────────<br>
+            ─────────────<br>
+            ─────────────<br>
+            ─────────────<br>
+        </p>
+        <p id="price" style="font-size: 1.5vw; top: 6.75vw; font-weight: bold;">
+          Uskoro!
+        </p>
       </div>
     </div>
   </section>
@@ -167,6 +184,12 @@
   </footer>
 
   <section id="buyMenu" class="buyMenuClosed">
+    <iframe src="" id="api-frame" class="sketchFrame sketchModel" allow="autoplay; fullscreen; vr" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <div class="sketchFrame noModel disabled">
+      <p>
+        Ne postoji model za ovaj proizvod!
+      </p>
+    </div>
     <div id="menu">
       <a class="exitMenu"></a>
       <div id="insideBorder">
@@ -192,6 +215,14 @@
       $('#buyProductDescription').text($(this).parent().children('#description').text());
       $('#buyProductImg').attr('src', $(this).parent().children('img').attr('src'));
       $('#buyProductPrice').text($(this).parent().children('#price').text());
+      if ($(this).val() == "") {
+        $('.sketchModel').addClass('disabled');
+        $('.noModel').removeClass('disabled');
+      } else {
+        $('.sketchModel').removeClass('disabled');
+        $('.noModel').addClass('disabled');
+        setModel($(this).val());
+      }
     });
 
     $('.exitMenu').click(function() {
@@ -208,6 +239,34 @@
         }
       });
     });
+
+
+  function setModel(mod) {
+    var iframe = document.getElementById( 'api-frame' );
+    var uid = mod;
+
+    // By default, the latest version of the viewer API will be used.
+    var client = new Sketchfab( iframe );
+
+    // Alternatively, you can request a specific version.
+    // var client = new Sketchfab( '1.4.2', iframe );
+
+    client.init( uid, {
+        success: function onSuccess( api ){
+            api.start();
+            api.addEventListener( 'viewerready', function() {
+
+                // API is ready to use
+                // Insert your code here
+                console.log( 'Viewer is ready' );
+
+            } );
+        },
+        error: function onError() {
+            console.log( 'Viewer error' );
+        }
+    });
+  }
 
 </script>
 </body>
