@@ -469,6 +469,7 @@ footer #copyrightInfo #copy {
 
 #buyMenu .disabled {
   opacity: 0 !important;
+  z-index: -555;
 }
 
 #buyMenu .sketchFrame p {
